@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EB53377C-5A4A-4D51-8476-E5A56AE4DDCE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8EC44BF-8A26-4D5E-8342-B854C0BF6525"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Deus/PageViewControllers/PageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "pageViewController(_:didFinishAnimating:previousViewControllers:transitionCompleted:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8EC44BF-8A26-4D5E-8342-B854C0BF6525 - f9e53ca106c5f872"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Deus.PageViewController.pageViewController(_: __C.UIPageViewController, didFinishAnimating: Swift.Bool, previousViewControllers: Swift.Array&lt;__C.UIViewController&gt;, transitionCompleted: Swift.Bool) -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Documents/xCodePractice/Deus/Deus/PageViewControllers/PageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "A8EC44BF-8A26-4D5E-8342-B854C0BF6525 - f9e53ca106c5f872"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Deus.PageViewController.pageViewController(_: __C.UIPageViewController, didFinishAnimating: Swift.Bool, previousViewControllers: Swift.Array&lt;__C.UIViewController&gt;, transitionCompleted: Swift.Bool) -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Documents/xCodePractice/Deus/Deus/PageViewControllers/PageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "255">
+               </Location>
+               <Location
+                  uuid = "A8EC44BF-8A26-4D5E-8342-B854C0BF6525 - f9e53ca106c5f8d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Deus.PageViewController.pageViewController(_: __C.UIPageViewController, didFinishAnimating: Swift.Bool, previousViewControllers: Swift.Array&lt;__C.UIViewController&gt;, transitionCompleted: Swift.Bool) -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Documents/xCodePractice/Deus/Deus/PageViewControllers/PageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
