@@ -40,6 +40,7 @@ friends via private messages.</string>
                         <viewLayoutGuide key="safeArea" id="1f1-jb-eVE"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qbG-SW-ZVo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mtl-Gr-QWf" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,6 +84,7 @@ friends via private messages.</string>
                         <viewLayoutGuide key="safeArea" id="YKp-1K-ZhZ"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jN6-yI-8RC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUU-vb-eHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,6 +122,7 @@ each other.</string>
                         <viewLayoutGuide key="safeArea" id="G0u-ca-NXX"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2je-fP-ZdI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJd-un-TsM" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +160,7 @@ friends are looking for you.</string>
                         <viewLayoutGuide key="safeArea" id="RCQ-ZH-PIK"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EOt-uR-Zod"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOs-6s-qBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

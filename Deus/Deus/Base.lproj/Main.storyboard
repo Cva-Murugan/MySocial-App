@@ -276,7 +276,7 @@ friends via private messages.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZs-pq-ku0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="652"/>
+            <point key="canvasLocation" x="756" y="652"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="XRg-ej-Xd3">
@@ -609,7 +609,7 @@ friends are looking for you.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSD-47-PRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="652"/>
+            <point key="canvasLocation" x="1511" y="652"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="IAL-Ie-v8u">
@@ -847,7 +847,7 @@ best friends.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czp-aZ-nKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2441" y="668"/>
+            <point key="canvasLocation" x="2254" y="652"/>
         </scene>
         <!--Login Navigation Controller-->
         <scene sceneID="bNh-cZ-YJh">
