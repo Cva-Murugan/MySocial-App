@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		9810937D2A39F089001E78A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9810937C2A39F089001E78A2 /* GoogleService-Info.plist */; };
 		986F6B192A3AE0D700D101C8 /* loginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */; };
+		986F6B1B2A3AEED900D101C8 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B1A2A3AEED900D101C8 /* Validations.swift */; };
+		986F6B1E2A3B042D00D101C8 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B1D2A3B042D00D101C8 /* ChatsViewController.swift */; };
+		986F6B202A3B043F00D101C8 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B1F2A3B043F00D101C8 /* ContactsViewController.swift */; };
+		986F6B222A3B044E00D101C8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B212A3B044E00D101C8 /* ProfileViewController.swift */; };
+		986F6B242A3B083800D101C8 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B232A3B083800D101C8 /* Date + Extension.swift */; };
+		986F6B262A3B084F00D101C8 /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B252A3B084F00D101C8 /* UIApplication + Extension.swift */; };
+		986F6B292A3B095D00D101C8 /* ChatNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B282A3B095D00D101C8 /* ChatNavController.swift */; };
+		986F6B2B2A3B0A1A00D101C8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B2A2A3B0A1A00D101C8 /* TabBarViewController.swift */; };
 		98B5D6542A39976F00911D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6532A39976F00911D31 /* AppDelegate.swift */; };
 		98B5D6562A39976F00911D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6552A39976F00911D31 /* SceneDelegate.swift */; };
 		98B5D6582A39976F00911D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6572A39976F00911D31 /* ViewController.swift */; };
@@ -31,6 +39,14 @@
 /* Begin PBXFileReference section */
 		9810937C2A39F089001E78A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginNavigationController.swift; sourceTree = "<group>"; };
+		986F6B1A2A3AEED900D101C8 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		986F6B1D2A3B042D00D101C8 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		986F6B1F2A3B043F00D101C8 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		986F6B212A3B044E00D101C8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		986F6B232A3B083800D101C8 /* Date + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
+		986F6B252A3B084F00D101C8 /* UIApplication + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		986F6B282A3B095D00D101C8 /* ChatNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavController.swift; sourceTree = "<group>"; };
+		986F6B2A2A3B0A1A00D101C8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		98B5D6502A39976F00911D31 /* Deus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B5D6532A39976F00911D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B5D6552A39976F00911D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +79,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		986F6B1C2A3B020F00D101C8 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				986F6B272A3B092500D101C8 /* NavControllers */,
+				986F6B1D2A3B042D00D101C8 /* ChatsViewController.swift */,
+				986F6B1F2A3B043F00D101C8 /* ContactsViewController.swift */,
+				986F6B212A3B044E00D101C8 /* ProfileViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		986F6B272A3B092500D101C8 /* NavControllers */ = {
+			isa = PBXGroup;
+			children = (
+				986F6B282A3B095D00D101C8 /* ChatNavController.swift */,
+				986F6B2A2A3B0A1A00D101C8 /* TabBarViewController.swift */,
+			);
+			path = NavControllers;
+			sourceTree = "<group>";
+		};
 		98B5D6472A39976F00911D31 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +118,7 @@
 		98B5D6522A39976F00911D31 /* Deus */ = {
 			isa = PBXGroup;
 			children = (
+				986F6B1C2A3B020F00D101C8 /* TabBarController */,
 				98B5D6802A39C38F00911D31 /* login & signIn */,
 				98B5D6762A39A72800911D31 /* Extension */,
 				98B5D66A2A399D4F00911D31 /* PageViewControllers */,
@@ -129,7 +166,9 @@
 		98B5D6762A39A72800911D31 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				986F6B252A3B084F00D101C8 /* UIApplication + Extension.swift */,
 				98B5D67E2A39B5F000911D31 /* UIView + Extension.swift */,
+				986F6B232A3B083800D101C8 /* Date + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -150,6 +189,7 @@
 				98B5D6832A39C3CC00911D31 /* LoginViewController.swift */,
 				98B5D6852A39C3F600911D31 /* SignUpViewController.swift */,
 				986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */,
+				986F6B1A2A3AEED900D101C8 /* Validations.swift */,
 			);
 			path = "login & signIn";
 			sourceTree = "<group>";
@@ -231,10 +271,18 @@
 				98B5D6582A39976F00911D31 /* ViewController.swift in Sources */,
 				98B5D6822A39C3B600911D31 /* WelcomeViewController.swift in Sources */,
 				98B5D6752A399E6A00911D31 /* PageViewController.swift in Sources */,
+				986F6B2B2A3B0A1A00D101C8 /* TabBarViewController.swift in Sources */,
+				986F6B292A3B095D00D101C8 /* ChatNavController.swift in Sources */,
 				98B5D66F2A399D9500911D31 /* SecondViewController.swift in Sources */,
 				98B5D6542A39976F00911D31 /* AppDelegate.swift in Sources */,
+				986F6B262A3B084F00D101C8 /* UIApplication + Extension.swift in Sources */,
+				986F6B202A3B043F00D101C8 /* ContactsViewController.swift in Sources */,
 				98B5D67D2A39B28F00911D31 /* FourthViewController.swift in Sources */,
+				986F6B222A3B044E00D101C8 /* ProfileViewController.swift in Sources */,
+				986F6B1B2A3AEED900D101C8 /* Validations.swift in Sources */,
+				986F6B1E2A3B042D00D101C8 /* ChatsViewController.swift in Sources */,
 				98B5D6862A39C3F600911D31 /* SignUpViewController.swift in Sources */,
+				986F6B242A3B083800D101C8 /* Date + Extension.swift in Sources */,
 				98B5D6562A39976F00911D31 /* SceneDelegate.swift in Sources */,
 				98B5D6722A399DAF00911D31 /* ThirdViewController.swift in Sources */,
 				98B5D66C2A399D7F00911D31 /* FirstViewController.swift in Sources */,
