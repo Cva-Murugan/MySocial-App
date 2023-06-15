@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9810937D2A39F089001E78A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9810937C2A39F089001E78A2 /* GoogleService-Info.plist */; };
+		986F6B192A3AE0D700D101C8 /* loginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */; };
 		98B5D6542A39976F00911D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6532A39976F00911D31 /* AppDelegate.swift */; };
 		98B5D6562A39976F00911D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6552A39976F00911D31 /* SceneDelegate.swift */; };
 		98B5D6582A39976F00911D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6572A39976F00911D31 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		9810937C2A39F089001E78A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginNavigationController.swift; sourceTree = "<group>"; };
 		98B5D6502A39976F00911D31 /* Deus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B5D6532A39976F00911D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B5D6552A39976F00911D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +87,6 @@
 				98B5D66A2A399D4F00911D31 /* PageViewControllers */,
 				98B5D6692A39979900911D31 /* ViewControllers */,
 				98B5D6682A39978A00911D31 /* Delegates */,
-				98B5D6672A39977B00911D31 /* Models */,
 				98B5D65C2A39977100911D31 /* Assets.xcassets */,
 				98B5D6592A39976F00911D31 /* Main.storyboard */,
 				98B5D6792A39B0B600911D31 /* Storyboards */,
@@ -94,13 +95,6 @@
 				9810937C2A39F089001E78A2 /* GoogleService-Info.plist */,
 			);
 			path = Deus;
-			sourceTree = "<group>";
-		};
-		98B5D6672A39977B00911D31 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		98B5D6682A39978A00911D31 /* Delegates */ = {
@@ -155,6 +149,7 @@
 				98B5D6812A39C3B600911D31 /* WelcomeViewController.swift */,
 				98B5D6832A39C3CC00911D31 /* LoginViewController.swift */,
 				98B5D6852A39C3F600911D31 /* SignUpViewController.swift */,
+				986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */,
 			);
 			path = "login & signIn";
 			sourceTree = "<group>";
@@ -243,6 +238,7 @@
 				98B5D6562A39976F00911D31 /* SceneDelegate.swift in Sources */,
 				98B5D6722A399DAF00911D31 /* ThirdViewController.swift in Sources */,
 				98B5D66C2A399D7F00911D31 /* FirstViewController.swift in Sources */,
+				986F6B192A3AE0D700D101C8 /* loginNavigationController.swift in Sources */,
 				98B5D67F2A39B5F000911D31 /* UIView + Extension.swift in Sources */,
 				98B5D6842A39C3CC00911D31 /* LoginViewController.swift in Sources */,
 			);
@@ -389,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -116,6 +116,9 @@ friends via private messages.</string>
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logInBtnTap:" destination="nGK-P6-a30" eventType="touchUpInside" id="duM-jO-zrz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c0-mc-4Tk">
                                 <rect key="frame" x="52.666666666666657" y="533.33333333333337" width="270" height="40"/>
@@ -135,6 +138,9 @@ friends via private messages.</string>
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="FBLogInTap:" destination="nGK-P6-a30" eventType="touchUpInside" id="GAa-wb-cQY"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-Ew-189">
                                 <rect key="frame" x="30" y="130" width="315" height="50"/>
@@ -174,6 +180,9 @@ friends via private messages.</string>
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appleLoginTap:" destination="nGK-P6-a30" eventType="touchUpInside" id="Dn4-nr-j21"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-zz-QeA">
                                 <rect key="frame" x="30" y="207" width="315" height="50"/>
@@ -196,6 +205,14 @@ friends via private messages.</string>
                                 <color key="textColor" red="0.0" green="0.36106623440000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple.logo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-pl-SFq">
+                                <rect key="frame" x="82" y="609" width="30" height="26.333333333333371"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="5Eo-ar-QQP"/>
+                                    <constraint firstAttribute="height" constant="28" id="KKk-0e-gDo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LhC-14-Bp9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -206,6 +223,7 @@ friends via private messages.</string>
                             <constraint firstItem="BDY-u8-ljM" firstAttribute="top" secondItem="eE3-Z3-zQ4" secondAttribute="topMargin" constant="12" id="3Z6-X2-kJt"/>
                             <constraint firstItem="kZz-Ew-189" firstAttribute="centerX" secondItem="eE3-Z3-zQ4" secondAttribute="centerX" id="4mO-eq-fzg"/>
                             <constraint firstItem="LhC-14-Bp9" firstAttribute="bottom" secondItem="YEA-Ev-thH" secondAttribute="bottom" constant="134" id="6Rr-HW-0aG"/>
+                            <constraint firstItem="HbW-pl-SFq" firstAttribute="leading" secondItem="LhC-14-Bp9" secondAttribute="leading" constant="82" id="8Oh-j2-sjl"/>
                             <constraint firstItem="YEA-Ev-thH" firstAttribute="top" secondItem="7c0-mc-4Tk" secondAttribute="bottom" constant="30.666666666666629" id="8T7-ZR-2LT"/>
                             <constraint firstItem="BDY-u8-ljM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LhC-14-Bp9" secondAttribute="leading" id="8Vd-5v-CcB"/>
                             <constraint firstItem="LhC-14-Bp9" firstAttribute="trailing" secondItem="NRr-zz-rro" secondAttribute="trailing" constant="35" id="Adu-yF-GuZ"/>
@@ -222,11 +240,15 @@ friends via private messages.</string>
                             <constraint firstItem="VBa-DM-WX7" firstAttribute="top" secondItem="NRr-zz-rro" secondAttribute="bottom" constant="51" id="iD5-OA-crn"/>
                             <constraint firstItem="7c0-mc-4Tk" firstAttribute="top" secondItem="aNU-QR-Hgf" secondAttribute="bottom" constant="20.333333333333371" id="rSU-lA-EJc"/>
                             <constraint firstItem="z6Y-co-lAM" firstAttribute="top" secondItem="YEA-Ev-thH" secondAttribute="bottom" constant="68" id="w3O-Ze-Di9"/>
+                            <constraint firstItem="HbW-pl-SFq" firstAttribute="top" secondItem="7c0-mc-4Tk" secondAttribute="bottom" constant="35.329999999999998" id="yQD-n3-nTw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="A9f-VR-q8R">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="LgG-Pr-nlN"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="A9f-VR-q8R"/>
+                    <connections>
+                        <outlet property="forgotPSWD" destination="NRr-zz-rro" id="6aD-TJ-f2O"/>
+                        <outlet property="logPassword" destination="zQd-zz-QeA" id="mDj-3D-3jC"/>
+                        <outlet property="loginEmail" destination="kZz-Ew-189" id="O98-k7-cdu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZs-pq-ku0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,9 +467,18 @@ friends are looking for you.</string>
                                     <constraint firstAttribute="width" constant="258" id="asA-hF-dMi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                     <color key="baseForegroundColor" red="1" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SignUpBtnTap:" destination="WGg-kg-pj0" eventType="touchUpInside" id="DjW-XW-HIF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpK-QZ-6e3">
                                 <rect key="frame" x="12" y="700" width="347" height="21"/>
@@ -497,6 +528,12 @@ friends are looking for you.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="91M-yN-v9O"/>
+                    <connections>
+                        <outlet property="email" destination="NmY-gt-Ac3" id="U6x-kS-pEO"/>
+                        <outlet property="fullname" destination="ne2-co-bbX" id="Qbw-na-uNT"/>
+                        <outlet property="password" destination="sTw-tY-bgQ" id="dhR-IC-5ad"/>
+                        <outlet property="phoneNumber" destination="fGF-MN-HEA" id="NaC-dx-UwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSD-47-PRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -618,10 +655,10 @@ best friends.</string>
             </objects>
             <point key="canvasLocation" x="504.80000000000001" y="651.72413793103453"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Login Navigation Controller-->
         <scene sceneID="bNh-cZ-YJh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TnN-HF-JkF" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootNAV" automaticallyAdjustsScrollViewInsets="NO" id="TnN-HF-JkF" customClass="loginNavigationController" customModule="Deus" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w1x-QX-bSb">
                         <rect key="frame" x="0.0" y="50" width="375" height="44"/>
@@ -629,7 +666,7 @@ best friends.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HUF-7t-GuE" kind="relationship" relationship="rootViewController" id="wnr-Ph-zX3"/>
+                        <segue destination="HUF-7t-GuE" kind="relationship" relationship="rootViewController" id="HE8-aq-zbS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pf8-XQ-kSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -640,7 +677,6 @@ best friends.</string>
     <resources>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.badge.key.fill" catalog="system" width="128" height="116"/>

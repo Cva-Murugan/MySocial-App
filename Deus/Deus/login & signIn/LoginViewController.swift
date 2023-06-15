@@ -9,13 +9,28 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginEmail: UITextField!
+    @IBOutlet weak var logPassword: UITextField!
+    @IBOutlet weak var forgotPSWD: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+    }
+  
+    
+    @IBAction func logInBtnTap(_ sender: Any) {
+         
     }
     
-
+    @IBAction func FBLogInTap(_ sender: Any) {
+        
+        
+    }
+    @IBAction func appleLoginTap(_ sender: Any) {
+        
+    }
     
 
 }
