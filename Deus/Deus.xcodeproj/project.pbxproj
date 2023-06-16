@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86AB4343E62EB9A042CF5D38 /* Pods_Deus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF3B240CEA23F7FB06EEF05 /* Pods_Deus.framework */; };
 		9810937D2A39F089001E78A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9810937C2A39F089001E78A2 /* GoogleService-Info.plist */; };
+		985A014D2A3B4AF800F182DD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985A014C2A3B4AF700F182DD /* UserModel.swift */; };
 		986F6B192A3AE0D700D101C8 /* loginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */; };
 		986F6B1B2A3AEED900D101C8 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B1A2A3AEED900D101C8 /* Validations.swift */; };
 		986F6B1E2A3B042D00D101C8 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B1D2A3B042D00D101C8 /* ChatsViewController.swift */; };
@@ -37,7 +39,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005736E4EA350F25F310EEC7 /* Pods-Deus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deus.debug.xcconfig"; path = "Target Support Files/Pods-Deus/Pods-Deus.debug.xcconfig"; sourceTree = "<group>"; };
+		7A30AE5C7C4CBE36D70C4F52 /* Pods-Deus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deus.release.xcconfig"; path = "Target Support Files/Pods-Deus/Pods-Deus.release.xcconfig"; sourceTree = "<group>"; };
+		7CF3B240CEA23F7FB06EEF05 /* Pods_Deus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9810937C2A39F089001E78A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		985A014C2A3B4AF700F182DD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginNavigationController.swift; sourceTree = "<group>"; };
 		986F6B1A2A3AEED900D101C8 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		986F6B1D2A3B042D00D101C8 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
@@ -73,12 +79,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AB4343E62EB9A042CF5D38 /* Pods_Deus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		259B8DE538C8980749AA8D26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				005736E4EA350F25F310EEC7 /* Pods-Deus.debug.xcconfig */,
+				7A30AE5C7C4CBE36D70C4F52 /* Pods-Deus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		655BF27BA990619A7C7F9398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CF3B240CEA23F7FB06EEF05 /* Pods_Deus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		985A014B2A3B4AD800F182DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				985A014C2A3B4AF700F182DD /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		986F6B1C2A3B020F00D101C8 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +136,8 @@
 			children = (
 				98B5D6522A39976F00911D31 /* Deus */,
 				98B5D6512A39976F00911D31 /* Products */,
+				259B8DE538C8980749AA8D26 /* Pods */,
+				655BF27BA990619A7C7F9398 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +152,7 @@
 		98B5D6522A39976F00911D31 /* Deus */ = {
 			isa = PBXGroup;
 			children = (
+				985A014B2A3B4AD800F182DD /* Model */,
 				986F6B1C2A3B020F00D101C8 /* TabBarController */,
 				98B5D6802A39C38F00911D31 /* login & signIn */,
 				98B5D6762A39A72800911D31 /* Extension */,
@@ -201,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98B5D6642A39977100911D31 /* Build configuration list for PBXNativeTarget "Deus" */;
 			buildPhases = (
+				256072186CC8AE63CF8B3EE1 /* [CP] Check Pods Manifest.lock */,
 				98B5D64C2A39976F00911D31 /* Sources */,
 				98B5D64D2A39976F00911D31 /* Frameworks */,
 				98B5D64E2A39976F00911D31 /* Resources */,
+				DF1CA28705A4C51C84CCEED7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +300,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		256072186CC8AE63CF8B3EE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Deus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1CA28705A4C51C84CCEED7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Deus/Pods-Deus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Deus/Pods-Deus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Deus/Pods-Deus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		98B5D64C2A39976F00911D31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -278,6 +357,7 @@
 				986F6B262A3B084F00D101C8 /* UIApplication + Extension.swift in Sources */,
 				986F6B202A3B043F00D101C8 /* ContactsViewController.swift in Sources */,
 				98B5D67D2A39B28F00911D31 /* FourthViewController.swift in Sources */,
+				985A014D2A3B4AF800F182DD /* UserModel.swift in Sources */,
 				986F6B222A3B044E00D101C8 /* ProfileViewController.swift in Sources */,
 				986F6B1B2A3AEED900D101C8 /* Validations.swift in Sources */,
 				986F6B1E2A3B042D00D101C8 /* ChatsViewController.swift in Sources */,
@@ -430,6 +510,7 @@
 		};
 		98B5D6652A39977100911D31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005736E4EA350F25F310EEC7 /* Pods-Deus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +539,7 @@
 		};
 		98B5D6662A39977100911D31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A30AE5C7C4CBE36D70C4F52 /* Pods-Deus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

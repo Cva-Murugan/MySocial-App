@@ -139,10 +139,10 @@ friends via private messages.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="FBLogInTap:" destination="nGK-P6-a30" eventType="touchUpInside" id="GAa-wb-cQY"/>
+                                    <action selector="logInBtnTap:" destination="nGK-P6-a30" eventType="touchUpInside" id="gp8-ZJ-GyV"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-Ew-189">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="someone@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-Ew-189">
                                 <rect key="frame" x="30" y="130" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="6IJ-lP-Zp9"/>
@@ -180,18 +180,15 @@ friends via private messages.</string>
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="appleLoginTap:" destination="nGK-P6-a30" eventType="touchUpInside" id="Dn4-nr-j21"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-zz-QeA">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some@1234" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-zz-QeA">
                                 <rect key="frame" x="30" y="207" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9qc-CD-zE5"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="pqF-Kt-EiS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SignUpViewController: UIViewController {
 
@@ -35,9 +36,69 @@ class SignUpViewController: UIViewController {
         phoneNumberErr.isHidden = true
     }
     
+    func navigation(){
+        UserDefaults.standard.set(true, forKey: "logIn_status")
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarViewController
+        
+        let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
+        sceneDelegate.window!.rootViewController = yourVC
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 
     @IBAction func SignUpBtnTap(_ sender: Any) {
-        
+        register()
+    }
+    
+    func register(){
+        let params: Parameters = [
+            "email" : "\(email.text!)",
+            "password" : "\(password.text!)"
+            ]
+
+        AF.request("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBsHxaY6BGrRawnxF2gtWHbPjWqzEsF4co", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 500).responseData { response in
+            switch response.result {
+                case .success(let data):
+            
+                        do {
+                            guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                                print("Error: Cannot convert data to JSON object")
+                                return
+                            }
+                            
+                            guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
+                                print("Error: Cannot convert JSON object to Pretty JSON data")
+                                return
+                            }
+                            
+                            guard let _ = String(data: prettyJsonData, encoding: .ascii) else {
+                                print("Error: Could print JSON in String")
+                                return
+                            }
+                    
+                            let apiData = RegistrDataModel(fromDictionary: jsonObject)
+                            if (apiData.token != nil) {
+                                
+                                // navigation to tabbar
+                                self.navigation()
+                                
+                                UserDefaults.standard.set(true, forKey: "logIn_status")
+                                
+                                let token = apiData.token as String
+                                
+                                UserDefaults.standard.set(token, forKey: "Token")
+                            }else{
+/////////                                        self.emailAndPswdIncorrect()
+                            }
+                        } catch {
+                            print("Error: Trying to convert JSON data to string")
+                            return
+                        }
+                case .failure(let error):
+                    print(error)
+            }
+        }
     }
     
 }
