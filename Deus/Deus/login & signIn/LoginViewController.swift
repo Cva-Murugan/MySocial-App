@@ -52,16 +52,17 @@ class LoginViewController: UIViewController {
                 print(" login ")
                 login()
             }
-            
         }
+    }
   
         
     func login(){
-        
+        // Some@1234
+        // someone@gamil.com
         let params: Parameters = [
-                "email" : "\(loginEmail.text!)",
-                "password" : "\(logPassword.text!)"
-            ]
+            "email": loginEmail.text!,
+            "password": logPassword.text!
+        ]
             
         AF.request("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBsHxaY6BGrRawnxF2gtWHbPjWqzEsF4co", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 500).responseData { response in
                 switch response.result {
@@ -104,8 +105,8 @@ class LoginViewController: UIViewController {
                 case .failure(let error):
                     print(error)
                 }
-            }
-        }
+     }
+        
         
         func navigation(){
             UserDefaults.standard.set(true, forKey: "logIn_status")

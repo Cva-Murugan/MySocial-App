@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Validations{
     
@@ -27,11 +28,9 @@ class Validations{
     
     func isValidPhoneNumber(_ PhoneNumber : String) -> Bool{
         
-        let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
-               let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-               return phoneTest.evaluate(with: PhoneNumber)
-        
-        
+        let phoneRegex = "^[0-9+]{0,1}+[0-9]{10,16}$"
+          let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+          return phoneTest.evaluate(with: PhoneNumber)
 //        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
 //        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
 //        let result =  phoneTest.evaluate(with: PhoneNumber)
@@ -46,4 +45,67 @@ class Validations{
         let isValidateName = validateName.evaluate(with: trimmedString)
         return isValidateName
      }
+    
+    
+    func emailFieldempty(email textField: UITextField){
+        if let _ = textField.text?.isEmpty{
+            textField.text = "Enter Phone Numebr"
+            textField.isHidden = false
+        }
+    }
+    
+    func validEmail(email textField: UITextField){
+        textField.text = "Enter valid Email Id"
+        textField.isHidden = false
+    }
+    
+    func passwordFieldempty(password textField: UITextField){
+        if let _ = textField.text?.isEmpty{
+            textField.text = "Enter Phone Numebr"
+            textField.isHidden = false
+        }
+    }
+   
+    func validPassword(password textField: UITextField){
+        textField.text = "Enter valid Password"
+        textField.isHidden = false
+    }
+
+    func nameFieldempty(name textField: UITextField){
+        if let _ = textField.text?.isEmpty{
+            textField.text = "Enter Phone Numebr"
+            textField.isHidden = false
+        }
+    }
+    
+    func validName(name textField: UITextField){
+        textField.text = "Enter valid Name"
+        textField.isHidden = false
+    }
+    
+    func phonefieldempty(PhoneNumber textField: UITextField){
+        if let _ = textField.text?.isEmpty{
+            textField.text = "Enter Phone Numebr"
+            textField.isHidden = false
+        }
+    }
+    
+    func validphone(textField: UITextField){
+        textField.text = "Enter valid Phone number"
+        textField.isHidden = false
+    }
+    
+    func validate(_ textField: UITextField) -> Bool {
+        guard let text = textField.text,
+            !text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty else {
+                
+         return false
+        }
+        return true
+    }
+    
+//    if let text = descriptionLabel.text, !text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty {
+//
+//    }
+    
 }

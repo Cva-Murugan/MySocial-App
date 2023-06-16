@@ -19,6 +19,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneNumberErr : UILabel!
     @IBOutlet weak var emailErr : UILabel!
     @IBOutlet weak var passwordErr : UILabel!
+    
+    var validations = Validations()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +50,35 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func SignUpBtnTap(_ sender: Any) {
-        register()
+    
+        if let email = email.text, let password = password.text, let name = fullname.text, let phone = phoneNumber.text{
+            if email == "" && password == "" && name == "" && phone == ""{
+                fieldEmptyError()
+            }else if email == "" {
+                validEmail()
+            }else if password == "" {
+                pswdfieldempty()
+            }else if !validations.isValidMailInput(input: email) {
+                validEmail()
+            }
+            else if !validations.isValidPassword(password: password) {
+                validPassword()
+            }else if !validations.isValidPhoneNumber(phone) {
+                validphone()
+            }else if !validations.validateName(name: name){
+                validName()
+            }else{
+                print(" login ")
+                register()
+            }
+        }
+
     }
     
     func register(){
         let params: Parameters = [
-            "email" : "\(email.text!)",
-            "password" : "\(password.text!)"
+            "email" : email.text!,
+            "password" : password.text!
             ]
 
         AF.request("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBsHxaY6BGrRawnxF2gtWHbPjWqzEsF4co", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 500).responseData { response in
@@ -88,6 +112,8 @@ class SignUpViewController: UIViewController {
                                 let token = apiData.token as String
                                 
                                 UserDefaults.standard.set(token, forKey: "Token")
+                                UserDefaults.standard.set( self.phoneNumber.text,forKey: "PhoneNumber")
+                                UserDefaults.standard.set(self.fullname.text, forKey: "displayName")
                             }else{
 /////////                                        self.emailAndPswdIncorrect()
                             }
@@ -158,62 +184,55 @@ extension SignUpViewController: UITextFieldDelegate{
         phoneNumberErr.isHidden = false
     }
 
-//    func textFieldDidBeginEditing(_ textField: UITextField) { /// recheck
-//
-//        if textField == email {
-//            fullnameErr.isHidden = true
-//            passwordErr.isHidden = true
-//            emailErr.isHidden = true
-//            phoneNumberErr.isHidden = true
-//        }else if textField == password {
-//            fullnameErr.isHidden = true
-//            passwordErr.isHidden = true
-//            emailErr.isHidden = true
-//            phoneNumberErr.isHidden = true
-//        }else if textField == fullname{
-//            fullnameErr.isHidden = true
-//            passwordErr.isHidden = true
-//            emailErr.isHidden = true
-//            phoneNumberErr.isHidden = true
-//        }else{
-//            fullnameErr.isHidden = true
-//            passwordErr.isHidden = true
-//            emailErr.isHidden = true
-//            phoneNumberErr.isHidden = true
-//        }
-//    }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == fullname{
-            let result = Validations.Shared.validateName(name: textField.text!)
-            if !result{
-                validName()
+            if textField.text != ""  {
+                let result = Validations.Shared.validateName(name: textField.text!)
+                if !result{
+                    validName()
+                }else{
+                    fullnameErr.isHidden = true
+                }
             }else{
                 fullnameErr.isHidden = true
             }
+
         }else if textField == email{
-            let result = Validations.Shared.isValidMailInput(input: textField.text!)
-            if !result{
-                validEmail()
+            if textField.text != ""{
+                let result = Validations.Shared.isValidMailInput(input: textField.text!)
+                if !result{
+                    validEmail()
+                }else{
+                    emailErr.isHidden = true
+                }
             }else{
                 emailErr.isHidden = true
             }
+            
         }else if textField == phoneNumber{
-            let result = Validations.Shared.isValidPhoneNumber(textField.text!)
-            if !result{
-                validphone()
+            if textField.text != ""{
+                let result = Validations.Shared.isValidPhoneNumber(textField.text!)
+                if !result{
+                    validphone()
+                }else{
+                    phoneNumberErr.isHidden = true
+                }
             }else{
                 phoneNumberErr.isHidden = true
             }
+            
         }else if textField == password{
-            let result = Validations.Shared.isValidPassword(password: textField.text!)
-            if !result{
-                validPassword()
+            if textField.text != ""{
+                let result = Validations.Shared.isValidPassword(password: textField.text!)
+                if !result{
+                    validPassword()
+                }else{
+                    passwordErr.isHidden = true
+                }
             }else{
                 passwordErr.isHidden = true
             }
         }
-        
     }
-    
 }

@@ -67,53 +67,5 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0D80810A-FD8D-433F-B8AD-3C24240E2C53"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Deus/login &amp; signIn/SignUpViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "textFieldDidEndEditing(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0D80810A-FD8D-433F-B8AD-3C24240E2C53 - 5a064f6326777f7c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Deus.SignUpViewController.textFieldDidEndEditing(__C.UITextField) -&gt; ()"
-                  moduleName = "Deus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "77">
-               </Location>
-               <Location
-                  uuid = "0D80810A-FD8D-433F-B8AD-3C24240E2C53 - 5a064f6326777f7c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Deus.SignUpViewController.textFieldDidEndEditing(__C.UITextField) -&gt; ()"
-                  moduleName = "Deus"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/SignUpViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "81">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
