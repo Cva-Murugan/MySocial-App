@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     
     var sceneDelegate = SceneDelegate()
     
+  
+    @IBOutlet weak var loadSpinner: UIActivityIndicatorView!
     @IBOutlet weak var loginEmail: UITextField!
     @IBOutlet weak var logPassword: UITextField!
     @IBOutlet weak var forgotPSWD: UILabel!
@@ -24,7 +26,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginEmail.delegate = self
         logPassword.delegate = self
-        
+        loadSpinner.isHidden = true
+        loadSpinner.hidesWhenStopped = true
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -49,6 +52,8 @@ class LoginViewController: UIViewController {
             else if !Validations.Shared.isValidPassword(password: password) {
                 validPassword()
             }else{
+                loadSpinner.isHidden = false
+                loadSpinner.startAnimating()
                 print(" login ")
                 login()
             }
@@ -86,7 +91,7 @@ class LoginViewController: UIViewController {
                         
                         let apiData = LoginDataModel(fromDictionary: jsonObject)
                         if apiData.registered {
-                            
+                            self.loadSpinner.stopAnimating()
                             // navigation to tabbar
                             self.navigation()
                             

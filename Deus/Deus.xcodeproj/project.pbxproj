@@ -33,6 +33,7 @@
 		989FE8822A3C8F5000CF4F33 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989FE8802A3C8F5000CF4F33 /* EditTableViewCell.swift */; };
 		989FE8832A3C8F5000CF4F33 /* EditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989FE8812A3C8F5000CF4F33 /* EditTableViewCell.xib */; };
 		989FE8852A3C8F9A00CF4F33 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989FE8842A3C8F9A00CF4F33 /* SettingsTableViewCell.swift */; };
+		98B598C12A3D82AB000F63AD /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B598C02A3D82AB000F63AD /* SettingsTableViewCell.xib */; };
 		98B5D6542A39976F00911D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6532A39976F00911D31 /* AppDelegate.swift */; };
 		98B5D6562A39976F00911D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6552A39976F00911D31 /* SceneDelegate.swift */; };
 		98B5D6582A39976F00911D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6572A39976F00911D31 /* ViewController.swift */; };
@@ -81,6 +82,7 @@
 		989FE8802A3C8F5000CF4F33 /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 		989FE8812A3C8F5000CF4F33 /* EditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTableViewCell.xib; sourceTree = "<group>"; };
 		989FE8842A3C8F9A00CF4F33 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		98B598C02A3D82AB000F63AD /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		98B5D6502A39976F00911D31 /* Deus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B5D6532A39976F00911D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B5D6552A39976F00911D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				989FE8802A3C8F5000CF4F33 /* EditTableViewCell.swift */,
 				989FE8812A3C8F5000CF4F33 /* EditTableViewCell.xib */,
 				989FE8842A3C8F9A00CF4F33 /* SettingsTableViewCell.swift */,
+				98B598C02A3D82AB000F63AD /* SettingsTableViewCell.xib */,
 			);
 			path = profileVC;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				98B5D6602A39977100911D31 /* LaunchScreen.storyboard in Resources */,
 				98B5D67B2A39B0E700911D31 /* PageView.storyboard in Resources */,
 				98B5D65D2A39977100911D31 /* Assets.xcassets in Resources */,
+				98B598C12A3D82AB000F63AD /* SettingsTableViewCell.xib in Resources */,
 				981463982A3C4E7A005FD8FB /* TableViewCell.xib in Resources */,
 				98B5D65B2A39976F00911D31 /* Main.storyboard in Resources */,
 				9810937D2A39F089001E78A2 /* GoogleService-Info.plist in Resources */,

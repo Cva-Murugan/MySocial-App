@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,18 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.and.waveform.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mBG-GQ-w2f">
-                        <rect key="frame" x="30" y="0.6666666666666643" width="40" height="38.333333333333336"/>
+                        <rect key="frame" x="30" y="5.6666666666666643" width="30" height="28.333333333333336"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemGrayColor"/>
+                        <color key="tintColor" red="0.42335897680000001" green="0.46783339979999999" blue="0.93643611670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="9zP-3M-Yms"/>
-                            <constraint firstAttribute="width" constant="40" id="RDY-Za-53b"/>
+                            <constraint firstAttribute="height" constant="30" id="082-qY-5hv"/>
+                            <constraint firstAttribute="width" constant="30" id="fH7-hR-Mcw"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su1-ku-60a">
-                        <rect key="frame" x="81" y="9" width="101" height="21"/>
+                        <rect key="frame" x="71" y="9" width="200" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="101" id="dmv-z2-7fB"/>
+                            <constraint firstAttribute="height" constant="21" id="AND-mD-vmp"/>
+                            <constraint firstAttribute="width" constant="200" id="bvu-TL-Ljr"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -38,11 +38,12 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="mBG-GQ-w2f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="399-Cn-VA7"/>
-                    <constraint firstAttribute="bottom" secondItem="Su1-ku-60a" secondAttribute="bottom" constant="10" id="G0d-Aa-vNA"/>
-                    <constraint firstItem="mBG-GQ-w2f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="cyG-6k-Esi"/>
-                    <constraint firstAttribute="bottom" secondItem="mBG-GQ-w2f" secondAttribute="bottom" constant="-1.4210854715202004e-14" id="wPd-vz-zPz"/>
-                    <constraint firstItem="Su1-ku-60a" firstAttribute="leading" secondItem="mBG-GQ-w2f" secondAttribute="trailing" constant="11" id="zDK-6x-GzD"/>
+                    <constraint firstAttribute="bottom" secondItem="mBG-GQ-w2f" secondAttribute="bottom" constant="5" id="40m-aq-9Hy"/>
+                    <constraint firstAttribute="bottom" secondItem="Su1-ku-60a" secondAttribute="bottom" constant="10" id="Ik0-ko-xv0"/>
+                    <constraint firstItem="Su1-ku-60a" firstAttribute="leading" secondItem="mBG-GQ-w2f" secondAttribute="trailing" constant="11" id="X1E-Km-6OD"/>
+                    <constraint firstItem="Su1-ku-60a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="kGe-jE-lnR"/>
+                    <constraint firstItem="mBG-GQ-w2f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="mYc-RU-auo"/>
+                    <constraint firstItem="mBG-GQ-w2f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ttX-9N-WRe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -55,8 +56,5 @@
     </objects>
     <resources>
         <image name="phone.and.waveform.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

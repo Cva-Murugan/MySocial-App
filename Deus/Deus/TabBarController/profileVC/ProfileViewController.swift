@@ -70,6 +70,17 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier) as! ProfileTableViewCell
         
+        switch indexPath.row{
+        case 0:
+            cell.imgLabel.tintColor = UIColor(red: 108/225.0, green: 119/225.0, blue: 239/225.0, alpha: 1.0)
+        case 1:
+            cell.imgLabel.tintColor = UIColor(red: 136/225.0, green: 131/225.0, blue: 150/225.0, alpha: 1.0)
+        case 2:
+            cell.imgLabel.tintColor = UIColor(red: 135/225.0, green: 228/225.0, blue: 151/225.0, alpha: 1.0)
+        default: break
+            
+        }
+        
         cell.imgLabel.image = profileArr[indexPath.row].image
         cell.profileLables.text = profileArr[indexPath.row].label
         
@@ -79,7 +90,7 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
      
-        let StroryBoard = UIStoryboard(name: "Main", bundle: nil)
+        _ = UIStoryboard(name: "Main", bundle: nil)
         switch indexPath.row{
         case 0:
             let vc = storyboard?.instantiateViewController(identifier: "editVC") as! EditViewController

@@ -9,6 +9,9 @@ import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var settingsLabel: UILabel!
+    @IBOutlet weak var `switch`: UISwitch!
+    
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
     
@@ -22,5 +25,9 @@ class SettingsTableViewCell: UITableViewCell {
 
        
     }
-
+    
+    @IBAction func switchTap(_ sender: Any) {
+        print("")
+    }
+    
 }
