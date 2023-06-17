@@ -35,12 +35,12 @@ struct LoginDataModel{
     var registered : Bool!
 
     init(fromDictionary dictionary: [String:Any]){
-        displayName = dictionary["displayName"] as? String
-        email = dictionary["email"] as? String
-        idToken = dictionary["idToken"] as? String
-        kind = dictionary["kind"] as? String
-        localId = dictionary["localId"] as? String
-        registered = dictionary["registered"] as? Bool
+        displayName = dictionary["displayName"] as? String ?? ""
+        email = dictionary["email"] as? String ?? ""
+        idToken = dictionary["idToken"] as? String ?? ""
+        kind = dictionary["kind"] as? String ?? ""
+        localId = dictionary["localId"] as? String ?? ""
+        registered = dictionary["registered"] as? Bool ?? false
     }
 
 
@@ -67,5 +67,20 @@ struct LoginDataModel{
         }
         return dictionary
     }
-
 }
+
+
+struct userData{
+    var userName: String!
+    var email: String!
+    var imgUrl: String!
+    var localId: String!
+    
+    init(fromDictionary dictionary: [String:Any]){
+        self.userName = dictionary["displayName"] as? String ?? ""
+        self.email = dictionary["email"] as? String ?? ""
+        self.imgUrl = dictionary["photoUrl"] as? String ?? ""
+        self.localId = dictionary["localId"] as? String ?? ""
+    }
+}
+

@@ -51,6 +51,7 @@
 		98B5D6822A39C3B600911D31 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6812A39C3B600911D31 /* WelcomeViewController.swift */; };
 		98B5D6842A39C3CC00911D31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6832A39C3CC00911D31 /* LoginViewController.swift */; };
 		98B5D6862A39C3F600911D31 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D6852A39C3F600911D31 /* SignUpViewController.swift */; };
+		98E08BD32A3DBDF300F72F9F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E08BD22A3DBDF200F72F9F /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		98B5D6812A39C3B600911D31 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		98B5D6832A39C3CC00911D31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		98B5D6852A39C3F600911D31 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		98E08BD22A3DBDF200F72F9F /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				986F6B252A3B084F00D101C8 /* UIApplication + Extension.swift */,
 				98B5D67E2A39B5F000911D31 /* UIView + Extension.swift */,
 				986F6B232A3B083800D101C8 /* Date + Extension.swift */,
+				98E08BD22A3DBDF200F72F9F /* ApiManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E08BD32A3DBDF300F72F9F /* ApiManager.swift in Sources */,
 				9814639E2A3C6A90005FD8FB /* EditViewController.swift in Sources */,
 				981463A22A3C6AAC005FD8FB /* ContactViewController.swift in Sources */,
 				98B5D6582A39976F00911D31 /* ViewController.swift in Sources */,

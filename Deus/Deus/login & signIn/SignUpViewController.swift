@@ -72,7 +72,6 @@ class SignUpViewController: UIViewController {
                 register()
             }
         }
-
     }
     
     func register(){
@@ -91,16 +90,6 @@ class SignUpViewController: UIViewController {
                                 return
                             }
                             
-                            guard let prettyJsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) else {
-                                print("Error: Cannot convert JSON object to Pretty JSON data")
-                                return
-                            }
-                            
-                            guard let _ = String(data: prettyJsonData, encoding: .ascii) else {
-                                print("Error: Could print JSON in String")
-                                return
-                            }
-                    
                             let apiData = RegistrDataModel(fromDictionary: jsonObject)
                             if (apiData.token != nil) {
                                 
@@ -112,8 +101,9 @@ class SignUpViewController: UIViewController {
                                 let token = apiData.token as String
                                 
                                 UserDefaults.standard.set(token, forKey: "Token")
-                                UserDefaults.standard.set( self.phoneNumber.text,forKey: "PhoneNumber")
+                                UserDefaults.standard.set( self.phoneNumber.text,forKey: "phoneNumber")
                                 UserDefaults.standard.set(self.fullname.text, forKey: "displayName")
+                                UserDefaults.standard.set(self.email.text,forKey: "email")
                             }else{
 /////////                                        self.emailAndPswdIncorrect()
                             }

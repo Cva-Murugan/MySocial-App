@@ -20,5 +20,100 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BE187EE-93C2-4D82-9821-8AA4142B2D9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Deus/login &amp; signIn/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "logInBtnTap(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A37322E7-BBDD-414E-AB05-D4E3BFC5B3F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Deus/login &amp; signIn/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "logInBtnTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A37322E7-BBDD-414E-AB05-D4E3BFC5B3F8 - 92ade67ec0d7ac88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Deus.LoginViewController.logInBtnTap(Any) -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  uuid = "A37322E7-BBDD-414E-AB05-D4E3BFC5B3F8 - 92ade67ec0d7ac88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Deus.LoginViewController.logInBtnTap(Any) -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "286">
+               </Location>
+               <Location
+                  uuid = "A37322E7-BBDD-414E-AB05-D4E3BFC5B3F8 - 92ade67ec0d7ac88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Deus.LoginViewController.logInBtnTap(Any) -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "696">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E6C83B2-F30C-426E-B291-174CCBC604FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Deus/login &amp; signIn/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "login()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

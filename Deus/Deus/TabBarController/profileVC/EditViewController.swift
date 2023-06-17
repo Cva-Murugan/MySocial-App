@@ -21,8 +21,12 @@ class EditViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var publicProfile = PublicProfile(firstName: "Some",lastName: "One")
-    var privateProfile = PrivateProfile(email: "some@gmail.com", phoneNumber: "9876543210")
+    
+    var firstName = UserDefaults.standard.string(forKey: "displayName")
+///    var LastName = UserDefaults.standard.string(forKey: "-")
+    
+    var email = UserDefaults.standard.string(forKey: "email")
+    var phonenumber = UserDefaults.standard.string(forKey: "phoneNumber")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +65,10 @@ extension EditViewController: UITableViewDataSource,UITableViewDelegate{
                 cell.contentView.backgroundColor = UIColor(red: 239/255.0, green: 238/255.0, blue: 242/255.0, alpha: 1.0 )
             } else if indexPath.row == 1{
                 cell.leftLabel.text = "First Name"
-                cell.rightLabel.text = publicProfile.firstName
+                cell.rightLabel.text = firstName
             }else{
                 cell.leftLabel.text = "Last Name"
-                cell.rightLabel.text = publicProfile.lastName
+                cell.rightLabel.text = "-"
             }
         }else{
             if indexPath.row == 0{
@@ -75,14 +79,13 @@ extension EditViewController: UITableViewDataSource,UITableViewDelegate{
                 cell.contentView.backgroundColor = UIColor(red: 239/255.0, green: 238/255.0, blue: 242/255.0, alpha: 1.0 )
             }else if indexPath.row == 1{
                 cell.leftLabel.text = "E-Mail Address"
-                cell.rightLabel.text = privateProfile.email
+                cell.rightLabel.text = email
             }else{
                 cell.leftLabel.text = "Phone Number"
-                cell.rightLabel.text = privateProfile.phoneNumber
+                cell.rightLabel.text = phonenumber
             }
         }
         return cell
     }
     
-   
 }

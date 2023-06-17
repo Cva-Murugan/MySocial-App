@@ -98,9 +98,13 @@ class LoginViewController: UIViewController {
                             UserDefaults.standard.set(true, forKey: "logIn_status")
                             
                             let token = apiData.idToken as String
-                            
                             UserDefaults.standard.set(token, forKey: "Token")
+                            let email = apiData.email
+                            UserDefaults.standard.set(email, forKey: "email")
+                            
                         }else{
+                            self.loadSpinner.stopAnimating()
+                            print("-----------------------------------------------")
                             /////////                                        self.emailAndPswdIncorrect()
                         }
                     } catch {
@@ -112,7 +116,7 @@ class LoginViewController: UIViewController {
                 }
      }
         
-        
+
         func navigation(){
             UserDefaults.standard.set(true, forKey: "logIn_status")
             

@@ -17,9 +17,13 @@ class ChatsViewController: UIViewController {
 //    @IBOutlet weak var collectioncellHight: NSLayoutConstraint!
     
     var searchController = UISearchController()
+    var apiManager = ApiManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSearchBar()
+        
+//        apiManager.uploadDataToDB()
         
         tableView.dataSource = self
         tableView.dataSource = self
@@ -104,6 +108,9 @@ extension ChatsViewController: UICollectionViewDelegate,UICollectionViewDataSour
         
         return cell
     }
+    
+    
+    
     
     
 }
