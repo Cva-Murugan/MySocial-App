@@ -1,4 +1,4 @@
-# MySocia-lApp
+# MySocia-App
 
 A social media application for iOS that allows users to connect, share updates, and communicate with friends. Built with Swift and Firebase backend, it provides secure user authentication and authorization using Firebase Authentication, and stores user information in a Firestore database.
 
@@ -34,7 +34,7 @@ Set up your Firebase project and configure the necessary credentials.
 
 Install Firebase dependencies using Cocoapods:
 
-Open MySocialApp.xcworkspace in Xcode.
+Open Deus.xcworkspace in Xcode.
 
 Update the Firebase configuration in AppDelegate.swift with your project's settings.
 
