@@ -97,25 +97,38 @@ class SignUpViewController: UIViewController {
                                 
                                 // navigation to tabbar
                                 self.navigation()
+//                                var phone:[String : Any]  = ["phoneNumber": self.phoneNumber.text!]
+//                                var name:[String: Any] = ["FullName": self.fullname.text!]
+//                                var email:[String: Any] = ["Email": self.fullname.text!]
                                 
-                                UserDefaults.standard.set(true, forKey: "logIn_status")
+                                let userDetails : [String: Any] = [
+                                    "phoneNumber": self.phoneNumber.text!,
+                                    "FullName": self.fullname.text!,
+                                    "Email": self.email.text!
+                                ]
                                 
                                 let token = apiData.token as String
+                                let localId = apiData.localId as String
                                 
-                                UserDefaults.standard.set(token, forKey: "Token")
-                                UserDefaults.standard.set( self.phoneNumber.text,forKey: "phoneNumber")
-                                UserDefaults.standard.set(self.fullname.text, forKey: "displayName")
-                                UserDefaults.standard.set(self.email.text,forKey: "email")
                                 
-                                var phone:[String : Any]  = ["phoneNumber": self.phoneNumber.text!]
-                                
-                                self.db.collection("UserDeatails").addDocument(data: phone){ err in
+                                self.db.collection("User_details").document(localId).setData(userDetails){ err in
                                     if let err = err {
                                         print("Error writing document: \(err)")
                                     } else {
                                         print("Document successfully written!")
                                     }
                                 }
+                                
+                                
+                                
+                                UserDefaults.standard.set(true, forKey: "logIn_status")
+                                UserDefaults.standard.set(localId, forKey: "localId")
+                                UserDefaults.standard.set(token, forKey: "Token")
+                                UserDefaults.standard.set( self.phoneNumber.text,forKey: "phoneNumber")
+                                UserDefaults.standard.set(self.fullname.text, forKey: "displayName")
+                                UserDefaults.standard.set(self.email.text,forKey: "email")
+                                
+                                
                             }else{
 /////////                                        self.emailAndPswdIncorrect()
                             }

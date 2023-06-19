@@ -160,16 +160,14 @@
 		9814638E2A3C4299005FD8FB /* profileVC */ = {
 			isa = PBXGroup;
 			children = (
+				9863EC912A405A580064D0E0 /* cells */,
 				986F6B212A3B044E00D101C8 /* ProfileViewController.swift */,
 				9814639D2A3C6A90005FD8FB /* EditViewController.swift */,
 				9814639F2A3C6A9E005FD8FB /* SettingsViewController.swift */,
 				981463A12A3C6AAC005FD8FB /* ContactViewController.swift */,
 				981463A32A3C6F7B005FD8FB /* ProfileTableViewCell.swift */,
-				981463A42A3C6F7B005FD8FB /* ProfileTableViewCell.xib */,
 				989FE8802A3C8F5000CF4F33 /* EditTableViewCell.swift */,
-				989FE8812A3C8F5000CF4F33 /* EditTableViewCell.xib */,
 				989FE8842A3C8F9A00CF4F33 /* SettingsTableViewCell.swift */,
-				98B598C02A3D82AB000F63AD /* SettingsTableViewCell.xib */,
 			);
 			path = profileVC;
 			sourceTree = "<group>";
@@ -180,6 +178,16 @@
 				985A014C2A3B4AF700F182DD /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9863EC912A405A580064D0E0 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				981463A42A3C6F7B005FD8FB /* ProfileTableViewCell.xib */,
+				989FE8812A3C8F5000CF4F33 /* EditTableViewCell.xib */,
+				98B598C02A3D82AB000F63AD /* SettingsTableViewCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		986F6B1C2A3B020F00D101C8 /* TabBarController */ = {

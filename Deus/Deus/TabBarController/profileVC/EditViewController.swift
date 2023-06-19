@@ -19,6 +19,8 @@ struct PrivateProfile{
 class EditViewController: UIViewController {
 
     
+    var sectionTitiles = ["1","2"]
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -45,6 +47,8 @@ class EditViewController: UIViewController {
 }
 
 extension EditViewController: UITableViewDataSource,UITableViewDelegate{
+
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2

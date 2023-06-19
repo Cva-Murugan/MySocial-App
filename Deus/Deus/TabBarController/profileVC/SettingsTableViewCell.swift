@@ -27,7 +27,10 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     @IBAction func switchTap(_ sender: Any) {
-        print("")
+        print("switch")
     }
     
+    @IBAction func btntap(_ sender: Any) {
+        print("btn tapped")
+    }
 }

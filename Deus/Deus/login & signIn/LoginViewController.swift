@@ -103,6 +103,8 @@ class LoginViewController: UIViewController {
                             UserDefaults.standard.set(email, forKey: "email")
                             let name = apiData.displayName
                             UserDefaults.standard.set(name, forKey: "displayName")
+                            let localId = apiData.localId
+                            UserDefaults.standard.set(localId, forKey: "localId")
                             
                         }else{
                             self.loadSpinner.stopAnimating()

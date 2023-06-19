@@ -11,7 +11,7 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="YjF-Fm-gL4" customClass="SettingsTableViewCell" customModule="Deus" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="448" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YjF-Fm-gL4" id="SSH-jV-Vwc">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YjF-Fm-gL4" id="SSH-jV-Vwc">
                 <rect key="frame" x="0.0" y="0.0" width="448" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -34,19 +34,31 @@
                             <action selector="switchTap:" destination="YjF-Fm-gL4" eventType="valueChanged" id="ioh-Ma-BPx"/>
                         </connections>
                     </switch>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYA-so-6er">
+                        <rect key="frame" x="257" y="8" width="65" height="34"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="btn"/>
+                        <connections>
+                            <action selector="btntap:" destination="YjF-Fm-gL4" eventType="touchUpInside" id="7mZ-Rq-C2X"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="at8-Tc-8eb" firstAttribute="leading" secondItem="SSH-jV-Vwc" secondAttribute="leading" constant="15" id="4Tv-pS-gdb"/>
                     <constraint firstItem="3lF-dd-VXO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="at8-Tc-8eb" secondAttribute="trailing" constant="70" id="4gg-5k-scp"/>
+                    <constraint firstItem="EYA-so-6er" firstAttribute="centerY" secondItem="SSH-jV-Vwc" secondAttribute="centerY" id="GVy-E2-1pt"/>
                     <constraint firstItem="at8-Tc-8eb" firstAttribute="top" secondItem="SSH-jV-Vwc" secondAttribute="top" constant="15" id="LLr-uW-4GQ"/>
+                    <constraint firstItem="EYA-so-6er" firstAttribute="top" secondItem="SSH-jV-Vwc" secondAttribute="top" constant="8" id="MqM-3u-FXQ"/>
                     <constraint firstItem="3lF-dd-VXO" firstAttribute="centerY" secondItem="at8-Tc-8eb" secondAttribute="centerY" id="OnI-1b-Ahi"/>
                     <constraint firstAttribute="bottom" secondItem="at8-Tc-8eb" secondAttribute="bottom" constant="15" id="RvL-hO-U4h"/>
+                    <constraint firstItem="3lF-dd-VXO" firstAttribute="leading" secondItem="EYA-so-6er" secondAttribute="trailing" constant="17" id="SkU-Cn-rnT"/>
                     <constraint firstAttribute="trailing" secondItem="3lF-dd-VXO" secondAttribute="trailing" constant="60" id="d1p-T5-FgR"/>
+                    <constraint firstAttribute="bottom" secondItem="EYA-so-6er" secondAttribute="bottom" constant="8" id="ewD-JS-jPx"/>
+                    <constraint firstItem="EYA-so-6er" firstAttribute="leading" secondItem="at8-Tc-8eb" secondAttribute="trailing" constant="8" symbolic="YES" id="q3g-AS-6bj"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="settingsLabel" destination="at8-Tc-8eb" id="sLo-a1-Sky"/>
-                <outlet property="switch" destination="3lF-dd-VXO" id="GJS-nr-eFg"/>
             </connections>
             <point key="canvasLocation" x="293.12977099236639" y="-195.07042253521126"/>
         </tableViewCell>

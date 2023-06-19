@@ -19,7 +19,7 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.profileIMG.layer.cornerRadius = bounds.height / 2
+        self.profileIMG.layer.cornerRadius =  self.profileIMG.frame.size.width / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

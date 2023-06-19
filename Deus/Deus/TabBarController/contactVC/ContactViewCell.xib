@@ -50,6 +50,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="contactBtnTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GsX-Gp-311"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99999994039999995" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -75,6 +78,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contactBTN" destination="3BA-Ad-FoV" id="Yz8-0w-1WO"/>
+                <outlet property="contactIMG" destination="IEL-bX-Tep" id="SQM-pq-qOV"/>
+                <outlet property="contactName" destination="bBq-qU-QF2" id="I0y-YV-siu"/>
+            </connections>
             <point key="canvasLocation" x="216.03053435114504" y="1.0563380281690142"/>
         </tableViewCell>
     </objects>

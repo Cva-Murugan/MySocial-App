@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
 
 class ChatsViewController: UIViewController {
    
@@ -13,6 +15,7 @@ class ChatsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var num = 10
+    var db = Firestore.firestore()
     
 //    @IBOutlet weak var collectioncellHight: NSLayoutConstraint!
     
@@ -22,6 +25,7 @@ class ChatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSearchBar()
+        dataRetrive()
         
 //        apiManager.uploadDataToDB()
         
@@ -51,6 +55,24 @@ class ChatsViewController: UIViewController {
         searchController.delegate = self
     }
 
+    
+    
+   
+    func dataRetrive(){
+        let localID = UserDefaults.standard.value(forKey: "localId")
+        
+        let dbRef = self.db.collection("User_details").document(localID as! String)
+        dbRef.getDocument{ (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    
     
 }
 
@@ -82,8 +104,8 @@ extension ChatsViewController:UISearchBarDelegate, UISearchControllerDelegate{
 extension ChatsViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500
-           // return UITableView.automaticDimension
+       
+            return UITableView.automaticDimension
         }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

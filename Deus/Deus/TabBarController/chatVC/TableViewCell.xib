@@ -47,7 +47,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11.56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D40-4V-T8M">
@@ -91,7 +91,7 @@
                 <outlet property="profileIMG" destination="TIR-HO-S5U" id="jNF-Cl-zxG"/>
                 <outlet property="profileName" destination="TrZ-0x-rLS" id="KKV-xB-Pjd"/>
             </connections>
-            <point key="canvasLocation" x="-348" y="-44"/>
+            <point key="canvasLocation" x="-348" y="-46"/>
         </tableViewCell>
     </objects>
     <resources>
