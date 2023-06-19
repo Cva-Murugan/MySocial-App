@@ -17,8 +17,14 @@ class ContactViewController: UIViewController {
 
     }
     
-
-
+    @IBAction func emailUsBtnTap(_ sender: Any) {
+        
+    }
+    
+    @IBAction func callUsBtnTap(_ sender: Any) {
+        
+    }
+    
 }
 
 
@@ -31,6 +37,7 @@ extension ContactViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier) as! ProfileTableViewCell
