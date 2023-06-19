@@ -38,6 +38,9 @@
                 <constraint firstItem="uyd-hW-WfA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="LvZ-fP-Mdg"/>
             </constraints>
             <size key="customSize" width="45" height="45"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="51.145038167938928" y="-9.5070422535211279"/>
         </collectionViewCell>
     </objects>

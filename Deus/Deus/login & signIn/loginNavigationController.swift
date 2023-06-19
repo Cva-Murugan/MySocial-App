@@ -14,7 +14,5 @@ class loginNavigationController: UINavigationController {
 
         
     }
-    
-
 
 }

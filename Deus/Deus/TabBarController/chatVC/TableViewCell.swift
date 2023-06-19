@@ -12,9 +12,14 @@ class TableViewCell: UITableViewCell {
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
     
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var profileIMG: UIImageView!
+    @IBOutlet weak var lastMSG: UILabel!
+    @IBOutlet weak var msgTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        //self.profileIMG.layer.cornerRadius = bounds.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,5 +27,6 @@ class TableViewCell: UITableViewCell {
 
        
     }
+    
     
 }

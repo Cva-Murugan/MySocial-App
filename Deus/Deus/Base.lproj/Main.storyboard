@@ -853,38 +853,43 @@ best friends.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2VK-rJ-frX">
-                                <rect key="frame" x="0.0" y="94" width="375" height="718"/>
-                                <color key="backgroundColor" red="0.83809905799999995" green="0.86380139820000001" blue="0.91106866330000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZgC-Wc-GES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kci-Mh-Xwt">
-                                        <size key="itemSize" width="128" height="128"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </collectionViewFlowLayout>
-                                    <cells/>
-                                </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rwa-2A-lzB">
+                                <rect key="frame" x="0.0" y="94" width="375" height="55"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Ed8-vT-IeN"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4k3-GG-sfB">
+                                    <size key="itemSize" width="128" height="72"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SrS-aC-jah">
+                                <rect key="frame" x="0.0" y="149" width="375" height="580"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ctf-Lb-yZW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="2VK-rJ-frX" secondAttribute="bottom" id="7MZ-P0-V98"/>
-                            <constraint firstItem="2VK-rJ-frX" firstAttribute="top" secondItem="ctf-Lb-yZW" secondAttribute="top" id="Tao-Ny-PhC"/>
-                            <constraint firstAttribute="trailing" secondItem="2VK-rJ-frX" secondAttribute="trailing" id="UfD-Ys-dTx"/>
-                            <constraint firstItem="2VK-rJ-frX" firstAttribute="leading" secondItem="ctf-Lb-yZW" secondAttribute="leading" id="enB-oh-TMc"/>
+                            <constraint firstItem="Rwa-2A-lzB" firstAttribute="leading" secondItem="ctf-Lb-yZW" secondAttribute="leading" id="2xG-Sv-3KQ"/>
+                            <constraint firstItem="SrS-aC-jah" firstAttribute="top" secondItem="Rwa-2A-lzB" secondAttribute="bottom" id="WzH-0S-k0l"/>
+                            <constraint firstItem="ctf-Lb-yZW" firstAttribute="trailing" secondItem="SrS-aC-jah" secondAttribute="trailing" id="hct-Kp-8oD"/>
+                            <constraint firstItem="Rwa-2A-lzB" firstAttribute="trailing" secondItem="ctf-Lb-yZW" secondAttribute="trailing" id="iQK-9X-u5X"/>
+                            <constraint firstItem="ctf-Lb-yZW" firstAttribute="bottom" secondItem="SrS-aC-jah" secondAttribute="bottom" id="oDg-5Q-K5k"/>
+                            <constraint firstItem="Rwa-2A-lzB" firstAttribute="top" secondItem="ctf-Lb-yZW" secondAttribute="top" id="qSn-qF-z7s"/>
+                            <constraint firstItem="SrS-aC-jah" firstAttribute="leading" secondItem="ctf-Lb-yZW" secondAttribute="leading" id="t8q-hW-dEw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="u0e-je-AHX">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet.clipboard" catalog="system" id="qFt-6S-NG1"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="ZgC-Wc-GES" id="NCZ-S8-4oz"/>
-                        <outlet property="tableView" destination="2VK-rJ-frX" id="7tN-M5-P2r"/>
+                        <outlet property="collectionView" destination="Rwa-2A-lzB" id="Xs2-iX-yah"/>
+                        <outlet property="tableView" destination="SrS-aC-jah" id="CXS-uN-xw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORG-sT-T2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

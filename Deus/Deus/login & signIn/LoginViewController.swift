@@ -101,10 +101,12 @@ class LoginViewController: UIViewController {
                             UserDefaults.standard.set(token, forKey: "Token")
                             let email = apiData.email
                             UserDefaults.standard.set(email, forKey: "email")
+                            let name = apiData.displayName
+                            UserDefaults.standard.set(name, forKey: "displayName")
                             
                         }else{
                             self.loadSpinner.stopAnimating()
-                            print("-----------------------------------------------")
+                            print("-------------------login----------------------------")
                             /////////                                        self.emailAndPswdIncorrect()
                         }
                     } catch {

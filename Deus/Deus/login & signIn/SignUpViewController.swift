@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
@@ -21,6 +22,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordErr : UILabel!
     
     var validations = Validations()
+    var db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +106,16 @@ class SignUpViewController: UIViewController {
                                 UserDefaults.standard.set( self.phoneNumber.text,forKey: "phoneNumber")
                                 UserDefaults.standard.set(self.fullname.text, forKey: "displayName")
                                 UserDefaults.standard.set(self.email.text,forKey: "email")
+                                
+                                var phone:[String : Any]  = ["phoneNumber": self.phoneNumber.text!]
+                                
+                                self.db.collection("UserDeatails").addDocument(data: phone){ err in
+                                    if let err = err {
+                                        print("Error writing document: \(err)")
+                                    } else {
+                                        print("Document successfully written!")
+                                    }
+                                }
                             }else{
 /////////                                        self.emailAndPswdIncorrect()
                             }

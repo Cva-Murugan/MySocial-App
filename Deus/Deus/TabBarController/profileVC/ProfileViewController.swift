@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var name:String = UserDefaults.standard.string(forKey: "displayName")!
+    
     
     var profileArr : [profilePage] = [
         profilePage(image: UIImage(systemName: "person.crop.circle")?.withTintColor(.blue), label: "Account Details"),
@@ -33,22 +33,28 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.userDataFromDB()
         
-        
-        
-        
-        
-        userName.text = name
+       
+       setup()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.isScrollEnabled = false
         self.tableView.register(ProfileTableViewCell.nib, forCellReuseIdentifier: ProfileTableViewCell.identifier)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.userDataFromDB()
+    }
+    
     @IBAction func logOutBtnTap(_ sender: Any) {
         UserDefaults.resetDefaults()
         navigation()
+    }
+    
+    func setup(){
+        let name:String = UserDefaults.standard.string(forKey: "displayName")!
+        userName.text = name
     }
     
 
@@ -118,38 +124,40 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
     }
     
     func userDataFromDB(){
-        let token: String = UserDefaults.standard.string(forKey: "Token")!
         
-        let params: Parameters = [
-            "idToken" : token
-        ]
-        
-        AF.request("https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyBsHxaY6BGrRawnxF2gtWHbPjWqzEsF4co", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 500).responseData { [self] response in
-            switch response.result {
-            case .success(let data):
-                
-                do {
-                    guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-                        print("Error: Cannot convert data to JSON object")
+        if let token: String = UserDefaults.standard.string(forKey: "Token"){
+            let params: Parameters = [
+                "idToken" : token
+            ]
+            
+            
+            AF.request("https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyBsHxaY6BGrRawnxF2gtWHbPjWqzEsF4co", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).validate(statusCode: 200 ..< 500).responseData { [self] response in
+                switch response.result {
+                case .success(let data):
+                    
+                    do {
+                        guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                            print("Error: Cannot convert data to JSON object")
+                            return
+                        }
+                        
+                        let apiData = userData(fromDictionary: jsonObject)
+
+                        if let img = apiData.imgUrl {
+                            if img != "" {
+                                let url = URL(string: img)
+                                let data = try? Data(contentsOf: url!)
+                                profilePicture.image = UIImage(data: data!)
+                            }
+                        }
+                        
+                    } catch {
+                        print("Error: Trying to convert JSON data to string")
                         return
                     }
-                    
-                    let apiData = userData(fromDictionary: jsonObject)
-                    
-                    userName.text = apiData.userName
-
-                    if let img = apiData.imgUrl {
-                        let url = URL(string: img)
-                        let data = try? Data(contentsOf: url!)
-                        profilePicture.image = UIImage(data: data!)
-                    }
-                    
-                } catch {
-                    print("Error: Trying to convert JSON data to string")
-                    return
+                case .failure(let error):
+                    print(error)
                 }
-            case .failure(let error):
-                print(error)
             }
         }
     }
