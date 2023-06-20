@@ -20,7 +20,7 @@
                         <rect key="frame" x="2" y="2" width="316" height="52"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrZ-0x-rLS">
-                                <rect key="frame" x="61" y="8" width="100" height="20"/>
+                                <rect key="frame" x="67" y="8" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6bU-AB-L5E"/>
                                 </constraints>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxW-Pu-B2b">
-                                <rect key="frame" x="61" y="31" width="104" height="14"/>
+                                <rect key="frame" x="67" y="31" width="104" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="ZMZ-wA-KDM"/>
                                 </constraints>
@@ -37,8 +37,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-HO-S5U">
-                                <rect key="frame" x="8" y="2.6666666666666643" width="50" height="47"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img2" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-HO-S5U">
+                                <rect key="frame" x="8" y="1" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.42335897680000001" green="0.46783339979999999" blue="0.93643611670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8Bq-fH-xiD"/>
                                     <constraint firstAttribute="width" constant="50" id="f4O-Sk-ZiA"/>
@@ -51,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11.56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D40-4V-T8M">
-                                <rect key="frame" x="176" y="33" width="83" height="12"/>
+                                <rect key="frame" x="182" y="33" width="83" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="FQ1-Bc-p9i"/>
                                 </constraints>
@@ -63,14 +64,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TIR-HO-S5U" firstAttribute="centerY" secondItem="Aob-O7-qPh" secondAttribute="centerY" id="0xf-FL-RSJ"/>
-                            <constraint firstItem="bxW-Pu-B2b" firstAttribute="leading" secondItem="TIR-HO-S5U" secondAttribute="trailing" constant="3" id="3XB-cE-GdV"/>
-                            <constraint firstItem="TIR-HO-S5U" firstAttribute="leading" secondItem="Aob-O7-qPh" secondAttribute="leading" constant="8" id="59g-eu-WPo"/>
-                            <constraint firstItem="TrZ-0x-rLS" firstAttribute="leading" secondItem="TIR-HO-S5U" secondAttribute="trailing" constant="3" id="8lB-8y-ctn"/>
+                            <constraint firstItem="bxW-Pu-B2b" firstAttribute="leading" secondItem="TIR-HO-S5U" secondAttribute="trailing" constant="9" id="IaZ-G0-mbj"/>
                             <constraint firstItem="D40-4V-T8M" firstAttribute="top" secondItem="Aob-O7-qPh" secondAttribute="top" constant="33" id="M30-eq-DpM"/>
+                            <constraint firstItem="TIR-HO-S5U" firstAttribute="leading" secondItem="Aob-O7-qPh" secondAttribute="leading" constant="8" id="UuK-pk-N2M"/>
                             <constraint firstAttribute="bottom" secondItem="D40-4V-T8M" secondAttribute="bottom" constant="7" id="YSu-sb-5Ct"/>
-                            <constraint firstItem="bxW-Pu-B2b" firstAttribute="leading" secondItem="TIR-HO-S5U" secondAttribute="trailing" constant="3" id="aEw-Iw-Oip"/>
                             <constraint firstItem="D40-4V-T8M" firstAttribute="leading" secondItem="bxW-Pu-B2b" secondAttribute="trailing" constant="11" id="fmZ-Hd-t67"/>
-                            <constraint firstItem="TrZ-0x-rLS" firstAttribute="leading" secondItem="TIR-HO-S5U" secondAttribute="trailing" constant="3" id="gd6-uB-MMc"/>
+                            <constraint firstItem="TrZ-0x-rLS" firstAttribute="leading" secondItem="TIR-HO-S5U" secondAttribute="trailing" constant="9" id="hTB-Hi-A6q"/>
                             <constraint firstItem="TrZ-0x-rLS" firstAttribute="top" secondItem="Aob-O7-qPh" secondAttribute="top" constant="8" id="j3g-l6-L2H"/>
                             <constraint firstItem="bxW-Pu-B2b" firstAttribute="top" secondItem="TrZ-0x-rLS" secondAttribute="bottom" constant="3" id="tkx-UP-sbU"/>
                         </constraints>
@@ -95,6 +94,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="square.fill" catalog="system" width="128" height="114"/>
+        <image name="img2" width="360" height="240"/>
     </resources>
 </document>

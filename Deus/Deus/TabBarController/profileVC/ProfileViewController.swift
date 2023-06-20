@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController {
     @IBAction func cameraBtnTap(_ sender: Any) {
         print("img btn tapped......")
         var picker = UIImagePickerController()
-        picker.sourceType = .camera
+        picker.sourceType = .photoLibrary
         picker.delegate = self
     
         self.present(picker, animated: true)

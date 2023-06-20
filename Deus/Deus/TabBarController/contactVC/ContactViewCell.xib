@@ -20,13 +20,16 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-m7-ced">
                         <rect key="frame" x="2" y="2" width="427" height="65"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-bX-Tep">
-                                <rect key="frame" x="23" y="3" width="60" height="58.666666666666671"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-bX-Tep">
+                                <rect key="frame" x="23" y="2" width="60" height="60"/>
                                 <color key="tintColor" red="0.83921568629999999" green="0.86274509799999999" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="RCQ-0Y-c9J"/>
                                     <constraint firstAttribute="height" constant="60" id="pqs-QE-cvH"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximiliana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-qU-QF2">
                                 <rect key="frame" x="91" y="22" width="225" height="21"/>
@@ -87,7 +90,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="circle.fill" catalog="system" width="128" height="123"/>
+        <image name="img3" width="240" height="240"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

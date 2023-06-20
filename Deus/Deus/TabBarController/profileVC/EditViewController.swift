@@ -47,26 +47,29 @@ class EditViewController: UIViewController {
 
 extension EditViewController: UITableViewDataSource,UITableViewDelegate{
 
+
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0{
+            return "PUBLIC PROFILE"
+        }else{
+            return "PRIVATE DETAILS"
+        }
+        
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EditTableViewCell.identifier ) as! EditTableViewCell
         if indexPath.section == 0{
             if indexPath.row == 0{
-                cell.leftLabel.font = UIFont.systemFont(ofSize: 11.0)
-                cell.leftLabel.textColor = UIColor(red: 109/255.0, green: 109/255.0, blue: 113/255.0, alpha: 1.0 )
-                cell.leftLabel.text = "PUBLIC PROFILE"
-                cell.rightLabel.isHidden = true
-                cell.contentView.backgroundColor = UIColor(red: 239/255.0, green: 238/255.0, blue: 242/255.0, alpha: 1.0 )
-            } else if indexPath.row == 1{
                 cell.leftLabel.text = "First Name"
                 cell.rightLabel.text = firstName
             }else{
@@ -74,13 +77,7 @@ extension EditViewController: UITableViewDataSource,UITableViewDelegate{
                 cell.rightLabel.text = "-"
             }
         }else{
-            if indexPath.row == 0{
-                cell.leftLabel.font = UIFont.systemFont(ofSize: 11.0)
-                cell.leftLabel.textColor = UIColor(red: 109/255.0, green: 109/255.0, blue: 113/255.0, alpha: 1.0 )
-                cell.leftLabel.text = "PRIVATE DETAILS"
-                cell.rightLabel.isHidden = true
-                cell.contentView.backgroundColor = UIColor(red: 239/255.0, green: 238/255.0, blue: 242/255.0, alpha: 1.0 )
-            }else if indexPath.row == 1{
+             if indexPath.row == 1{
                 cell.leftLabel.text = "E-Mail Address"
                 cell.rightLabel.text = email
             }else{

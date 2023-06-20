@@ -20,6 +20,7 @@
 		981463A22A3C6AAC005FD8FB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981463A12A3C6AAC005FD8FB /* ContactViewController.swift */; };
 		981463A52A3C6F7B005FD8FB /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981463A32A3C6F7B005FD8FB /* ProfileTableViewCell.swift */; };
 		981463A62A3C6F7B005FD8FB /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 981463A42A3C6F7B005FD8FB /* ProfileTableViewCell.xib */; };
+		9827B11F2A41954F00D714DC /* MeesagingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827B11E2A41954E00D714DC /* MeesagingInterfaceController.swift */; };
 		985A014D2A3B4AF800F182DD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985A014C2A3B4AF700F182DD /* UserModel.swift */; };
 		986F6B192A3AE0D700D101C8 /* loginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */; };
 		986F6B1B2A3AEED900D101C8 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F6B1A2A3AEED900D101C8 /* Validations.swift */; };
@@ -70,6 +71,8 @@
 		981463A12A3C6AAC005FD8FB /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		981463A32A3C6F7B005FD8FB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		981463A42A3C6F7B005FD8FB /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		9827B11E2A41954E00D714DC /* MeesagingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeesagingInterfaceController.swift; sourceTree = "<group>"; };
+		9827B1202A41BE7F00D714DC /* Deus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Deus.entitlements; sourceTree = "<group>"; };
 		985A014C2A3B4AF700F182DD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginNavigationController.swift; sourceTree = "<group>"; };
 		986F6B1A2A3AEED900D101C8 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 				981463952A3C4E7A005FD8FB /* TableViewCell.swift */,
 				981463902A3C4E53005FD8FB /* CollectionViewCell.xib */,
 				981463962A3C4E7A005FD8FB /* TableViewCell.xib */,
+				9827B11E2A41954E00D714DC /* MeesagingInterfaceController.swift */,
 			);
 			path = chatVC;
 			sourceTree = "<group>";
@@ -219,6 +223,7 @@
 				655BF27BA990619A7C7F9398 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		98B5D6512A39976F00911D31 /* Products */ = {
 			isa = PBXGroup;
@@ -231,6 +236,7 @@
 		98B5D6522A39976F00911D31 /* Deus */ = {
 			isa = PBXGroup;
 			children = (
+				9827B1202A41BE7F00D714DC /* Deus.entitlements */,
 				985A014B2A3B4AD800F182DD /* Model */,
 				986F6B1C2A3B020F00D101C8 /* TabBarController */,
 				98B5D6802A39C38F00911D31 /* login & signIn */,
@@ -450,6 +456,7 @@
 				981463972A3C4E7A005FD8FB /* TableViewCell.swift in Sources */,
 				986F6B202A3B043F00D101C8 /* ContactsViewController.swift in Sources */,
 				98B5D67D2A39B28F00911D31 /* FourthViewController.swift in Sources */,
+				9827B11F2A41954F00D714DC /* MeesagingInterfaceController.swift in Sources */,
 				985A014D2A3B4AF800F182DD /* UserModel.swift in Sources */,
 				986F6B222A3B044E00D101C8 /* ProfileViewController.swift in Sources */,
 				986F6B1B2A3AEED900D101C8 /* Validations.swift in Sources */,
@@ -611,10 +618,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Deus/Deus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Deus/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = 2;
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = 4;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = 1;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = 3;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -640,10 +653,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Deus/Deus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Deus/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = 2;
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = 4;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = 1;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = 3;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
