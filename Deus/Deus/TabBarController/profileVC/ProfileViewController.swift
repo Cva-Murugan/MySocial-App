@@ -57,7 +57,18 @@ class ProfileViewController: UIViewController {
         userName.text = name
     }
     
-
+    
+    @IBAction func cameraBtnTap(_ sender: Any) {
+        print("img btn tapped......")
+        var picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+    
+        self.present(picker, animated: true)
+        
+        
+    }
+    
     func navigation(){
         
         UserDefaults.standard.set(false, forKey: "logIn_status")
@@ -164,3 +175,17 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource{
 }
 
 
+extension ProfileViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
+            return
+        }
+        
+        profilePicture.image = image
+    }
+}

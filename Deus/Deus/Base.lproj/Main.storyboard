@@ -780,8 +780,9 @@ best friends.</string>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="75"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-Bx-hHY">
@@ -816,22 +817,41 @@ best friends.</string>
                                     <action selector="logOutBtnTap:" destination="95s-CP-8nu" eventType="touchUpInside" id="xc8-W7-p9S"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmI-M6-xQx">
+                                <rect key="frame" x="232.66666666666652" y="248" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dhV-Y2-pbF"/>
+                                    <constraint firstAttribute="width" constant="30" id="m3f-eS-TZj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera.viewfinder" catalog="system">
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraBtnTap:" destination="95s-CP-8nu" eventType="touchUpInside" id="xtU-3a-zC2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z31-AN-2hd"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ja2-Bx-hHY" firstAttribute="trailing" secondItem="z31-AN-2hd" secondAttribute="trailing" id="9ZB-oe-O5w"/>
+                            <constraint firstItem="HmI-M6-xQx" firstAttribute="top" secondItem="z31-AN-2hd" secondAttribute="top" constant="154" id="Agg-re-fU6"/>
                             <constraint firstItem="z31-AN-2hd" firstAttribute="bottom" secondItem="1uC-yV-qlA" secondAttribute="bottom" constant="67" id="Art-As-5QU"/>
                             <constraint firstItem="1uC-yV-qlA" firstAttribute="top" secondItem="ja2-Bx-hHY" secondAttribute="bottom" constant="88" id="Edl-cl-5xA"/>
                             <constraint firstItem="ja2-Bx-hHY" firstAttribute="top" secondItem="Db9-wF-iOH" secondAttribute="bottom" constant="85" id="KZi-cO-MX6"/>
                             <constraint firstItem="z31-AN-2hd" firstAttribute="trailing" secondItem="Db9-wF-iOH" secondAttribute="trailing" constant="67" id="YWK-wK-4g6"/>
-                            <constraint firstItem="z31-AN-2hd" firstAttribute="trailing" secondItem="CjS-Dx-Kpt" secondAttribute="trailing" constant="112.33" id="aYL-Wt-FmZ"/>
                             <constraint firstItem="Db9-wF-iOH" firstAttribute="leading" secondItem="z31-AN-2hd" secondAttribute="leading" constant="67" id="ebI-9H-O63"/>
                             <constraint firstItem="1uC-yV-qlA" firstAttribute="centerX" secondItem="ja2-Bx-hHY" secondAttribute="centerX" id="fek-rC-Gm4"/>
+                            <constraint firstItem="CjS-Dx-Kpt" firstAttribute="centerX" secondItem="uod-dK-dqO" secondAttribute="centerX" id="fye-zN-tfh"/>
+                            <constraint firstItem="HmI-M6-xQx" firstAttribute="centerX" secondItem="uod-dK-dqO" secondAttribute="centerX" constant="60.166666666666515" id="gZg-Hc-fQn"/>
                             <constraint firstItem="Db9-wF-iOH" firstAttribute="top" secondItem="CjS-Dx-Kpt" secondAttribute="bottom" constant="21" id="jvd-GY-NE3"/>
                             <constraint firstItem="CjS-Dx-Kpt" firstAttribute="top" secondItem="z31-AN-2hd" secondAttribute="top" constant="38" id="o67-jU-wfI"/>
                             <constraint firstItem="ja2-Bx-hHY" firstAttribute="leading" secondItem="z31-AN-2hd" secondAttribute="leading" id="v86-HY-KIV"/>
-                            <constraint firstItem="CjS-Dx-Kpt" firstAttribute="leading" secondItem="z31-AN-2hd" secondAttribute="leading" constant="112.67" id="xju-VX-vn5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="PBo-LC-VZ7"/>
@@ -1275,6 +1295,7 @@ best friends.</string>
     <resources>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
+        <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
         <image name="message.badge" catalog="system" width="128" height="116"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>

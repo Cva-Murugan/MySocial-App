@@ -25,13 +25,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3lF-dd-VXO">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3lF-dd-VXO">
                         <rect key="frame" x="339" y="10" width="51" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="c8A-ow-JlF"/>
                         </constraints>
                         <connections>
-                            <action selector="switchTap:" destination="YjF-Fm-gL4" eventType="valueChanged" id="ioh-Ma-BPx"/>
+                            <action selector="clickSubmit:" destination="YjF-Fm-gL4" eventType="touchUpInside" id="j6m-iB-FDJ"/>
                         </connections>
                     </switch>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYA-so-6er">
@@ -58,9 +58,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnSwitch" destination="3lF-dd-VXO" id="o5k-75-7vH"/>
                 <outlet property="settingsLabel" destination="at8-Tc-8eb" id="sLo-a1-Sky"/>
             </connections>
-            <point key="canvasLocation" x="293.12977099236639" y="-195.07042253521126"/>
+            <point key="canvasLocation" x="-255" y="-222"/>
         </tableViewCell>
     </objects>
 </document>

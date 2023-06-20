@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "373A7B78-8D2D-4F5D-88EF-6AED60DF25A7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Deus/TabBarController/profileVC/SettingsTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "switchTap(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2C1500CC-D73C-4796-A1F6-119B00519506"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -50,6 +34,38 @@
             endingLineNumber = "105"
             landmarkName = "login()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0793121A-55D9-47ED-AF9D-289AFFA2980D - 48f1a7542871dbf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Deus.LoginViewController.login() -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "3658">
+               </Location>
+               <Location
+                  uuid = "0793121A-55D9-47ED-AF9D-289AFFA2980D - 48f1a7542871dbf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in Deus.LoginViewController.login() -&gt; ()"
+                  moduleName = "Deus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/novastrid/Chat-App/Deus/Deus/login%20&amp;%20signIn/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "3735">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
