@@ -72,7 +72,6 @@
 		981463A32A3C6F7B005FD8FB /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		981463A42A3C6F7B005FD8FB /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		9827B11E2A41954E00D714DC /* MeesagingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeesagingInterfaceController.swift; sourceTree = "<group>"; };
-		9827B1202A41BE7F00D714DC /* Deus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Deus.entitlements; sourceTree = "<group>"; };
 		985A014C2A3B4AF700F182DD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		986F6B182A3AE0D700D101C8 /* loginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginNavigationController.swift; sourceTree = "<group>"; };
 		986F6B1A2A3AEED900D101C8 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
@@ -236,7 +235,6 @@
 		98B5D6522A39976F00911D31 /* Deus */ = {
 			isa = PBXGroup;
 			children = (
-				9827B1202A41BE7F00D714DC /* Deus.entitlements */,
 				985A014B2A3B4AD800F182DD /* Model */,
 				986F6B1C2A3B020F00D101C8 /* TabBarController */,
 				98B5D6802A39C38F00911D31 /* login & signIn */,
@@ -621,7 +619,7 @@
 				CODE_SIGN_ENTITLEMENTS = Deus/Deus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6928JFDCH4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Deus/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = 2;
@@ -656,7 +654,7 @@
 				CODE_SIGN_ENTITLEMENTS = Deus/Deus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6928JFDCH4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Deus/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = 2;
