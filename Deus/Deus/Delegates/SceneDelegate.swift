@@ -14,22 +14,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let isLoggedIn =  UserDefaults.standard.value(forKey: "logIn_status") ?? false
+        
+        let isLanuchedBefore = UserDefaults.standard.value(forKey: "isLanuchedBefore") ?? false
+        
+        if isLanuchedBefore as! Bool {
+            let isLoggedIn =  UserDefaults.standard.value(forKey: "logIn_status") ?? false
 
-         if isLoggedIn as! Bool {
-                  print("User logged in")
-                  let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-             let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarViewController
-                  self.window?.rootViewController = yourVC
-                  self.window?.makeKeyAndVisible()
-              }
-              else {
-                  print("User Not logged in")
-                  let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "rootNAV") as! loginNavigationController
-                  self.window?.rootViewController = yourVC
-                  self.window?.makeKeyAndVisible()
-              }
+             if isLoggedIn as! Bool {
+                      print("User logged in")
+                      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                 let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "tabBarVC") as! TabBarViewController
+                      self.window?.rootViewController = yourVC
+                      self.window?.makeKeyAndVisible()
+                  }
+                  else {
+                      print("User Not logged in")
+                      let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "rootNAV") as! loginNavigationController
+                      self.window?.rootViewController = yourVC
+                      self.window?.makeKeyAndVisible()
+                  }
+        }else{
+            print("App Installed")
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+          let yourVC = mainStoryboard.instantiateViewController(withIdentifier: "pageVC") as! PageViewController
+            self.window?.rootViewController = yourVC
+            self.window?.makeKeyAndVisible()
+        }
+        
+        
+        
+        
 
         guard let _ = (scene as? UIWindowScene) else { return }
     }

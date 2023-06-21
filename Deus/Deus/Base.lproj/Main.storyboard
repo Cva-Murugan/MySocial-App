@@ -61,7 +61,7 @@ friends via private messages.</string>
         <!--Page View Controller-->
         <scene sceneID="Zij-Me-A0c">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2ds-6c-dfE" customClass="PageViewController" customModule="Deus" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="pageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2ds-6c-dfE" customClass="PageViewController" customModule="Deus" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abM-Dh-Fwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-817" y="-27"/>
@@ -409,13 +409,30 @@ each other.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5p-vn-Xgk">
-                                <rect key="frame" x="86.333333333333329" y="442" width="202.66666666666669" height="40.666666666666686"/>
+                                <rect key="frame" x="86" y="442" width="203" height="40.666666666666686"/>
                                 <string key="text">Receive notifications when
 friends are looking for you.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5n-BA-bqT">
+                                <rect key="frame" x="256" y="626" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WgQ-5o-Pgc"/>
+                                    <constraint firstAttribute="width" constant="50" id="maU-bZ-Ppy"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.99999994039999995" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-&gt;"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnTap:" destination="iM3-nl-wyz" eventType="touchUpInside" id="0qs-qA-9Gc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h5G-og-dia"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -424,9 +441,12 @@ friends are looking for you.</string>
                             <constraint firstItem="GdH-f2-KuF" firstAttribute="top" secondItem="Tht-DT-Jr6" secondAttribute="bottom" constant="30" id="DFE-me-sVD"/>
                             <constraint firstItem="h5G-og-dia" firstAttribute="bottom" secondItem="K5p-vn-Xgk" secondAttribute="bottom" constant="295.33333333333331" id="NuD-fT-Vuq"/>
                             <constraint firstItem="K5p-vn-Xgk" firstAttribute="top" secondItem="GdH-f2-KuF" secondAttribute="bottom" constant="25" id="O53-VA-f6f"/>
+                            <constraint firstItem="h5G-og-dia" firstAttribute="trailing" secondItem="U5n-BA-bqT" secondAttribute="trailing" constant="69" id="ibe-dZ-dZq"/>
                             <constraint firstItem="GdH-f2-KuF" firstAttribute="centerX" secondItem="Tht-DT-Jr6" secondAttribute="centerX" id="kX9-Mu-DTg"/>
+                            <constraint firstItem="h5G-og-dia" firstAttribute="bottom" secondItem="U5n-BA-bqT" secondAttribute="bottom" constant="102" id="mTW-3n-70b"/>
                             <constraint firstItem="Tht-DT-Jr6" firstAttribute="centerX" secondItem="dbS-IH-GKd" secondAttribute="centerX" id="nyr-13-Nhf"/>
                             <constraint firstItem="K5p-vn-Xgk" firstAttribute="centerX" secondItem="GdH-f2-KuF" secondAttribute="centerX" id="x7d-be-352"/>
+                            <constraint firstItem="h5G-og-dia" firstAttribute="trailing" secondItem="K5p-vn-Xgk" secondAttribute="trailing" constant="86" id="zY4-Up-JDd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1345,6 +1365,9 @@ best friends.</string>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
